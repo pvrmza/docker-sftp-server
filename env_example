@@ -1,0 +1,16 @@
+# user / pass
+USERNAME=sftp1
+PASSWORD=password
+# Should be the same as the volume mapping of app container
+FOLDER=/data
+# Optional: folder permission
+FILEPERMISSION=755
+# Optional: folder owner
+OWNER_ID=1001
+# Optional: unmask
+UMASK=0222
+# Optional: chroot
+CHROOT=1
+# Optional: blacklisted requests 
+# list requests: /usr/lib/openssh/sftp-server -Q requests
+SFTPBLACKREQ=remove,rmdir,mkdir,symlink,posix-rename,realpath

@@ -1,0 +1,12 @@
+# dotenv environment variables file
+.env*
+*.env
+
+# Temporary folders
+tmp/
+temp/
+data/
+vol/
+
+# Config files
+users.yaml

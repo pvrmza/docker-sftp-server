@@ -1,0 +1,18 @@
+users:
+  - username: username1
+    uid: 1001
+    homedirectory: /home/username1
+    password: Cambiame01!
+    ssh_public_keys:
+      - "ssh-rsa <your ssh public key 1"
+      - "ssh-rsa <your ssh public key 2"
+      - "ssh-rsa <your ssh public key 3"
+
+  - username: username2
+    uid: 1002
+    homedirectory: /home/username2
+    umask: 0222
+    chroot: /data1
+    sftpblackewq: remove,rmdir,mkdir,symlink,rename
+    ssh_public_keys:
+      - "ssh-rsa <your ssh public key 1"

@@ -1,0 +1,16 @@
+    version: '2'
+
+    services:
+      sshd:
+        image: pvrmza/docker-sftp-server:latest
+        cap_add:
+          # Required if you want to chroot
+          - SYS_ADMIN
+        security_opt:
+          # Required if you want to chroot
+          - apparmor:unconfined
+        ports:
+          - 2222:22
+        volumes:
+          - ./users.yaml:/config/users.yaml
+          - ./vol/keys:/etc/ssh/keys/
